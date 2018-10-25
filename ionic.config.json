@@ -1,0 +1,7 @@
+{
+  "name": "PBLD",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

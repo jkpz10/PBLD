@@ -1,0 +1,40 @@
+<!--
+  Generated template for the BldResultPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title> <span>PWR</span>BLD</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1>BUILD NAME</h1>
+
+  <ion-list no-lines>
+    <button ion-item *ngFor="let item of itemPart | async" (click)="itemSelected(item)">
+      <div class="icon-parts {{item.class}}"></div><span class="partsName">{{ item.type }} <br>
+        <small> {{ item.price | currency }} </small></span>
+    </button>
+  </ion-list>
+  <div class="total-cash">
+    <ion-grid>
+      <ion-row class="price">
+        <ion-col col-4 class="left">
+          <h2>$</h2>
+        </ion-col>
+        <ion-col col-8 class="right">
+          <h2>{{sumRes}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,45 @@
+<!--
+  Generated template for the PurposePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title> <span>PWR</span>BLD</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <h1>1.</h1>
+  <h3>What is it for ?</h3> 
+  
+  <div class="picker">
+    <ion-grid>
+      <ion-row id="checkbox"> 
+          <ion-col col-6 class="home">
+            <input type="checkbox" name="rGroup" [(ngModel)]="home" value="0" id="home" />
+          <label class="box" for="home"><div class="icon-home" style="background: url(../../assets/imgs/purpose/home.png) !important;"></div></label>
+            <p>Home/ Work
+              Use</p>
+          </ion-col>
+          <ion-col col-6 class="gaming">
+            
+            <input type="checkbox" name="rGroup" [(ngModel)]="gaming" value="1" id="gaming" />
+            <label class="box" for="gaming"><div class="icon-gaming" style="background: url(../../assets/imgs/purpose/gaming.png) !important;"></div></label>
+            <p>Gaming Use</p>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div>
+      <button ion-button block color="Success" (click)="goToSecondBld()">Next</button>
+  </div>
+  
+  
+</ion-content>

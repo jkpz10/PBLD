@@ -1,0 +1,102 @@
+.ios, .md{
+  page-utilities {
+    ion-content{
+
+      color: #ECECED;
+
+      h1{
+        font-family: 'Roboto', sans-serif;
+        font-size: 36px;
+        font-weight: 300;
+        color: #7AC231;
+
+        padding-top: 41px;
+        //center block
+        width: fit-content;
+        display: block;
+        margin: 0 auto;
+      }
+
+      h3{
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        padding-top: 10px;
+        //center block
+        width: fit-content;
+        display: block;
+        margin: 0 auto;
+      }
+
+      button{
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color: #3B3C43;
+        background: #ECECED;
+        //size
+        width: 236px;
+        height: 31px;
+        border-radius: 4px;
+        //center block
+        display: block;
+        margin: 0 auto;
+      }
+
+      //items
+      .picker {
+        ion-grid{
+          padding-top: 86px;
+          padding-bottom: 89px;
+        }
+
+        .checkbox{
+          //to center blocks
+          display: inline-flex;
+          margin: 0 auto;
+
+          .item{
+            padding-right: 15.5px;
+            padding-left: 15.5px;
+            
+            p{
+            font-family: 'Lato', sans-serif;
+            font-size: 9px;
+            font-weight: 300;
+            padding-top: 17px;
+            //center blocks
+            width: fit-content;
+            display: block;
+            margin: 0 auto;
+            }
+          }
+
+          //logo placeholder
+          .icon-item {
+            background: url('http://placehold.it/60x60');
+            border: 1px solid #707070;
+            width: 60px;
+            height: 60px;
+            
+          //to center blocks
+            display: block;
+            margin: 11.5px auto;
+          }
+
+          .box{
+            // border: 1px solid #707070;
+            display: inline-block;
+            width: 85px;
+            height: 85px;
+          }
+          input[type=checkbox]{
+            display: none;
+          }
+          input[type=checkbox]:checked + .box{
+            border: .5px solid #7AC231;
+          }
+        }
+      }  
+    }
+  }
+}

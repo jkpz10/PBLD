@@ -1,0 +1,46 @@
+.ios, .md {
+  page-home {
+    // background image of screen
+  
+    ion-content { //all css inside ion-content
+      background: url(../../assets/imgs/home-bg2x.jpg) !important;  // background image of screen
+
+      //Fonts used inside ion-content
+      font-family: 'Lato', sans-serif !important;
+
+      //app title
+      .pwrbld-title{ 
+          color: #4A4B54;
+          font-weight: 600;
+          font-size: 39px;
+          padding-top: 120px;
+          padding-bottom: 109px;
+
+          width: fit-content;
+          display: block;
+          margin: 0 auto;
+
+          span {
+            font-weight: 100;
+          }
+        }
+
+        // BUTTONS
+        .btnStart, .btnAbout { 
+          font-size: 20px;
+          font-weight: 200;
+          height: 51px;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 10px;
+        }
+
+        .btnStart{
+          width: 268px;
+        }
+        .btnAbout{
+          width: 164px;
+        }
+    }
+  }
+}

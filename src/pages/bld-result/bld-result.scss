@@ -1,0 +1,116 @@
+.ios, .md {
+  page-bld-result {
+
+    ion-content{
+
+      color: #ECECED;
+
+      h1{
+        font-family: 'Roboto', sans-serif;
+        font-size: 35px;
+        font-weight: 600;
+        color: #7AC231;
+
+        padding-top: 38px;
+        //center block
+        width: fit-content;
+        display: block;
+        margin: 0 auto;
+      }
+
+      ion-list {
+        padding-top: 48px;
+
+        button {
+          background: #2A2B31;
+          margin-bottom: 5px;
+        }
+        ion-label{
+          color: #ECECED;
+
+          height: 64px;
+          margin: 0;
+
+          .partsName{
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 60%;
+
+            float: left;
+            padding-left: 15px;
+            padding-top: 14px;
+
+            small{
+              
+              font-size: 11pxx;
+              // padding-left: 15px;
+              font-weight: 300;
+            }
+          }
+        }
+
+        .icon-parts{
+          background: black;
+          display: block;
+          float: left;
+          width: 54px;
+          height: 54px;
+
+          margin-top: 6px;
+        }
+
+        .case{
+          background: url('../../assets/imgs/parts/case.png') center !important;
+        } .cpu{
+          background: url('../../assets/imgs/parts/cpu.png') center !important;
+        }.mobo{
+          background: url('../../assets/imgs/parts/mobo.png') center !important;
+        }.gpu{
+          background: url('../../assets/imgs/parts/gpu.png') center !important;
+        }.ram{
+          background: url('../../assets/imgs/parts/ram.png') center !important;
+        }.storage{
+          background: url('../../assets/imgs/parts/storage.png') center !important;
+        }.psu{
+          background: url('../../assets/imgs/parts/psu.png') center !important;
+        }.cooling{
+          background: url('../../assets/imgs/parts/cooling.png') center !important;
+        }
+      }
+
+      .total-cash{
+        display: block;
+        margin: 0 auto;
+        border-top: 1px solid #fff;
+        width: 85%;
+        height: 63.5px;
+
+        ion-grid{
+          font-family: 'Roboto', sans-serif;
+          
+          padding: 17.5px 10px 0 10px;
+
+
+          .left{
+            color:#707070;
+            h2{
+              font-weight: 600;
+              font-size: 30px;
+            }
+          }
+          .right{
+            text-align: right;
+            color: #7AC231;
+
+            h2{
+              font-weight: 600;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}
+
