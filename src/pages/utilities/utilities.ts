@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BaseBuildPage } from '../base-build/base-build';
+import { ToastController } from 'ionic-angular';
+
 
 /**
  * Generated class for the UtilitiesPage page.
@@ -34,7 +36,12 @@ export class UtilitiesPage {
   //   this.browser
   // ]
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public toastCtrl: ToastController
+    ) {
+
     this.title = navParams.get('data');
     this.purpose = navParams.get('purpose');
 
@@ -50,6 +57,12 @@ export class UtilitiesPage {
       this.purpose;
       console.log(this.purpose);
       this.navCtrl.push(BaseBuildPage, { purpose: this.purpose });
+    }else {
+      const toast = this.toastCtrl.create({
+        message: 'Must select 1 or more item only',
+        duration: 3000
+      });
+      toast.present();
     }
   }
 }

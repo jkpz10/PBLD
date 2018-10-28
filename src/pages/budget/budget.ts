@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { BldResultPage } from '../bld-result/bld-result';
 
 /**
@@ -25,8 +25,10 @@ export class BudgetPage {
 
   
 
-  constructor(public navCtrl: NavController,
+  constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
+    public toastCtrl: ToastController
   ) {
     this.buildType = navParams.get('data');
     this.purpose = navParams.get('purpose');
@@ -44,6 +46,11 @@ export class BudgetPage {
       this.navCtrl.push(BldResultPage, { budget: this.budget, buildType: this.buildType,purpose:this.purpose });
       
     } else {
+      const toast = this.toastCtrl.create({
+        message: 'select 1 item only',
+        duration: 3000
+      });
+      toast.present();
       console.log('Select 1 item');
     }
 

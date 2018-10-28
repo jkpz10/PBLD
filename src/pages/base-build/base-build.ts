@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BudgetPage } from '../budget/budget';
+import { ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the BaseBuildPage page.
@@ -21,9 +22,14 @@ export class BaseBuildPage {
 
   amd: boolean = false;
   intel: boolean = false;
+  
   buildType: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public toastCtrl: ToastController
+    ) {
 
     this.purpose = navParams.get('purpose');
   }
@@ -35,7 +41,12 @@ export class BaseBuildPage {
   goToFouthBld() {
 
     if (this.amd == true && this.intel == true) {
-      console.log('Select 1 item only')
+      const toast = this.toastCtrl.create({
+        message: 'Select 1 item only',
+        duration: 3000
+      });
+      toast.present();
+      console.log('Select 1 item only');
     }
     else if (this.amd == true) {
       this.buildType = 'amd';
@@ -46,6 +57,11 @@ export class BaseBuildPage {
       console.log(this.buildType, this.purpose);
       this.navCtrl.push(BudgetPage, { data: this.buildType, purpose: this.purpose });
     } else {
+      const toast = this.toastCtrl.create({
+        message: 'no item selected',
+        duration: 3000
+      });
+      toast.present();
       console.log('no item selected');
     }
   }

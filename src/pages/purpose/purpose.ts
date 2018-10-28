@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 //ADDED IMPORTS
 import { UtilitiesPage } from '../utilities/utilities';
 import { GamingUtilPage } from '../gaming-util/gaming-util';
+import { ToastController } from 'ionic-angular';
 
 /**
  * Generated class for the PurposePage page.
@@ -21,7 +22,10 @@ export class PurposePage {
   home:boolean = false;
   gaming:boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -30,6 +34,11 @@ export class PurposePage {
 
   goToSecondBld(title){
      if (this.home == true && this.gaming == true ){
+      const toast = this.toastCtrl.create({
+        message: 'Must select 1 item only',
+        duration: 3000
+      });
+      toast.present();
       console.log("Must select 1 item only");
     } else if (this.home == true) {
       title = 'Commonly Used Apps';

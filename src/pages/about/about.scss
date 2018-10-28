@@ -1,3 +1,18 @@
-page-about {
+.ios, .md {
+  page-about {
+    ion-content{
 
+      h1{
+        font-family: 'Roboto', sans-serif;
+        font-size: 36px;
+        font-weight: 300;
+        color: #7AC231;
+
+        text-align: center;
+        padding-top: 41px;
+      }
+      
+      color: #fff;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import { buildListService } from '../../services/build-list/build-list.service';
@@ -21,6 +21,8 @@ export class BldResultPage {
   itemPart: Observable<any[]>;
   totalCash: Observable<any[]>;
 
+  buildName;
+
   // Sum Total Cash variable
   sum = 0;
   sumRes: any;
@@ -35,7 +37,8 @@ export class BldResultPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private build: buildListService,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public toastCtrl: ToastController
   ) {
 
     this.budget = navParams.get('budget');
@@ -301,12 +304,17 @@ export class BldResultPage {
   }
 
   showAlert() {
-    const alert = this.alertCtrl.create({
-      title: 'TIP',
-      subTitle: 'Take a screenshot, to save a copy of your computer specs',
-      buttons: ['OK']
+    const toast = this.toastCtrl.create({
+      message: 'Take a screenshot, to save a copy of your computer specs',
+      duration: 5000
     });
-    alert.present()
+    toast.present();
+    // const alert = this.alertCtrl.create({
+    //   title: 'TIP',
+    //   subTitle: 'Take a screenshot, to save a copy of your computer specs',
+    //   buttons: ['OK']
+    // });
+    // alert.present()
   }
 
 
